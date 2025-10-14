@@ -95,9 +95,10 @@ public class CatW3 : MonoBehaviour
             // Below this comment, CALL the method named DecreaseHealth.
             // Notice this method's return type is void- that means we don't
             //      have to store the result anywhere.
-            
+
 
             // STEP 2 ---------------------------------------------------------
+            DecreaseHealth();
 
             // STEP 6 ---------------------------------------------------------
             // Write an IF STATEMENT below that does the following:
@@ -107,7 +108,7 @@ public class CatW3 : MonoBehaviour
             //
             // Try toggling the Destroy Cat When Dead setting on the Inspector,
             //      and see how the cat is removed ONLY when it's checked!
-            
+
 
             // STEP 6 ---------------------------------------------------------
         }
@@ -129,40 +130,43 @@ public class CatW3 : MonoBehaviour
     private void DecreaseHealth()
     {
         // write Step 3 below this comment!
-
-
-        // STEP 5 -------------------------------------------------------------
-        // Once you've finished Step 4, CALL the GetHealthSpeechText method
-        //      and store the result in _speechText's text variable.
-        // This will look very similar to the above line to change _healthText ;)
-
-
-        // STEP 5 -------------------------------------------------------------
+        _health -= 1;
+        _healthText.text = "health = " + _health;
     }
-    // STEP 3 -----------------------------------------------------------------
 
-    // STEP 4 -----------------------------------------------------------------
-    // This method decides what TEXT to display depending on how much health
-    //      the cat has left, to warn the player about low health.
-    //
-    // First, UNCOMMENT the method signature and brackets.
-    // Then, replace the ??? with the RETURN TYPE you think the method should use.
-    //
-    // Finally, fill out the method BODY. This method should:
-    // 1. IF the value of _health is less than HALF of _maxHealth,
-    //      return "OH NO!".
-    // 2. Otherwise, return "ouch".
+    // STEP 5 -------------------------------------------------------------
+    // Once you've finished Step 4, CALL the GetHealthSpeechText method
+    //      and store the result in _speechText's text variable.
+    // This will look very similar to the above line to change _healthText ;)
 
-    //private ??? GetHealthSpeechText()
-    //{
-        // put the method body here!
-        
-    //}
-    
-    // STEP 4 -----------------------------------------------------------------
 
-    // ------------------------------------------------------------------------
-    private void ChangeColor(BallW3 ball)
+    // STEP 5 -------------------------------------------------------------
+}
+// STEP 3 -----------------------------------------------------------------
+
+// STEP 4 -----------------------------------------------------------------
+// This method decides what TEXT to display depending on how much health
+//      the cat has left, to warn the player about low health.
+//
+// First, UNCOMMENT the method signature and brackets.
+// Then, replace the ??? with the RETURN TYPE you think the method should use.
+//
+// Finally, fill out the method BODY. This method should:
+// 1. IF the value of _health is less than HALF of _maxHealth,
+//      return "OH NO!".
+// 2. Otherwise, return "ouch".
+
+private string GetHealthSpeechText()
+
+
+// put the method body here!
+
+//}
+
+// STEP 4 -----------------------------------------------------------------
+
+// ------------------------------------------------------------------------
+private void ChangeColor(BallW3 ball)
     {
         // STEP 7 -------------------------------------------------------------
         // Set the value of the _spriteRenderer's color variable to the value
